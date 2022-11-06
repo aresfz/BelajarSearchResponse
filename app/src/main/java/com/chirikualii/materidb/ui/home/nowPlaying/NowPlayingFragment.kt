@@ -40,8 +40,11 @@ class NowPlayingFragment : Fragment() {
         adapter = MovieListAdapter()
         binding.rvMovie.adapter = adapter
 
-        mViewModel.doGetNowPlayingMovie()
         observeView()
+    }
+    override fun onResume() {
+        super.onResume()
+        mViewModel.doGetNowPlayingMovie()
     }
 
     private fun observeView() {

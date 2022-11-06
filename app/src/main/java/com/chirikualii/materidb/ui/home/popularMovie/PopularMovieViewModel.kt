@@ -29,4 +29,5 @@ class PopularMovieViewModel(private val repo: MovieRepo) :ViewModel() {
             }
         }
     }
+
 }
